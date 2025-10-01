@@ -1,0 +1,210 @@
+.portfolio {
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 80px);
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.portfolio-header {
+  margin-bottom: 2rem;
+}
+
+.portfolio-header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.returns-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.returns-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.returns-table-container {
+  overflow-x: auto;
+}
+
+.returns-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.returns-table th {
+  text-align: left;
+  padding: 0.75rem;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.85rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.returns-table td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.returns-table .fund-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.returns-table .positive {
+  color: #10a37f;
+}
+
+.returns-table .negative {
+  color: #ef4444;
+}
+
+.table-note {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+}
+
+.chart-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chart-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.chart-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.date-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.date-input-group label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.date-input-group input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.reset-btn {
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #10a37f;
+  font-weight: 500;
+}
+
+.reset-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.chart-subtitle {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+.chart-container {
+  margin-top: 1rem;
+}
+
+.info-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.info-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.info-item p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1rem;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date-inputs {
+    flex-direction: column;
+  }
+
+  .returns-table {
+    font-size: 0.8rem;
+  }
+
+  .returns-table th,
+  .returns-table td {
+    padding: 0.5rem;
+  }
+}
+

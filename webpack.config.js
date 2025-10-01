@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -43,7 +44,6 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './public/index.html',
-        favicon: './public/favicon.svg',
         minify: isProduction ? {
           removeComments: true,
           collapseWhitespace: true,
@@ -56,6 +56,14 @@ module.exports = (env, argv) => {
           minifyCSS: true,
           minifyURLs: true,
         } : false
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: 'public/favicon.svg',
+            to: 'favicon.svg'
+          }
+        ]
       })
     ],
     devServer: {
